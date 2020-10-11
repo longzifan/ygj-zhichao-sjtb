@@ -1,0 +1,23 @@
+= Cheatsheets
+
+[[CaseCNInfo]]
+== CaseCNInfo
+
+
+[cols=">25%,25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[anjuanCode]]`@anjuanCode`|`String`|-
+|[[anjuanId]]`@anjuanId`|`String`|-
+|[[copyCaseId]]`@copyCaseId`|`String`|-
+|[[copyObject]]`@copyObject`|`String`|-
+|[[copyOrgName]]`@copyOrgName`|`String`|-
+|[[copyStatus]]`@copyStatus`|`String`|-
+|[[copyTime]]`@copyTime`|`String`|-
+|[[copyType]]`@copyType`|`String`|-
+|[[fromDistCode]]`@fromDistCode`|`String`|-
+|[[punishmentDate]]`@punishmentDate`|`String`|-
+|[[toDistCode]]`@toDistCode`|`String`|-
+|===
+

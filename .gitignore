@@ -1,0 +1,41 @@
+.DS_Store
+node_modules
+/dist
+package-lock.json
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+.project
+.settings
+*.iml
+target
+target/
+/target
+
+.vertx/
+classes/
+file-uploads/
+.properties
+/bin/
+*.class
+/bin
+/.classpath
+statics/download/*
+!statics/download/test.txt
+statics/upload/*
+!statics/upload/test.txt
