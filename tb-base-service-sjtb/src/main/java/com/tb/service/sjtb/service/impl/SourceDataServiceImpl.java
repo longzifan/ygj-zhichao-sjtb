@@ -39,15 +39,20 @@ public class SourceDataServiceImpl implements SourceDataService, BaseAsyncServic
         Map<String, Date> time = getTime(param);
         List<Map<String, Object>> maps = sourceDataRepository.sendUploadWeighPicInfo(time.get("startTime"), time.get("endTime"));
         AtomicReference<JsonArray> jsonArray = new AtomicReference<>(new JsonArray());
-        maps.forEach(map -> {
+        for (Map<String, Object> map : maps) {
+            Map<String, Object> newMap = new HashMap<>(map);
             String imagePath = String.valueOf(map.get("fileName"));
             if (null != imagePath) {
                 String path = imagePath.substring(imagePath.indexOf("/") + 1);
-                SmbFileUtil.smbGet(path, map);
+                SmbFileUtil.smbGet(path, newMap);
             }
-            JsonObject jsonObject = new JsonObject(map);
+            JsonObject jsonObject = new JsonObject(newMap);
             jsonArray.get().add(jsonObject);
-        });
+        }
+
+//        maps.forEach(map -> {
+//
+//        });
         batchSend(jsonArray.get(), "2.5");
     }
 

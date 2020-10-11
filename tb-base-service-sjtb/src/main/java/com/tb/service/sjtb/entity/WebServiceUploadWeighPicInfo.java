@@ -16,7 +16,7 @@ public class WebServiceUploadWeighPicInfo extends WebServiceSuper {
     @Override
     public void send(String count, JsonArray jsonArray){
         ProvServiceService ps = new ProvServiceService();
-        String responsejson = ps.getProvServicePort().uploadWeighInfo(getSendJsonObject(count, jsonArray).toString());
+        String responsejson = ps.getProvServicePort().uploadWeighPicInfo(getSendJsonObject(count, jsonArray).toString());
         JsonObject jasonObject = new JsonObject(responsejson);
         log.info("称重检测图片视频文件信息上传接口--返回的信息是：" + jasonObject.toString());
         log.info("称重检测图片视频文件信息上传接口--返回的信息是：" + jasonObject.getValue("message"));
